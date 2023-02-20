@@ -1,0 +1,52 @@
+.main3{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-top: 600px;
+    height: 80vh;
+}
+.main3h {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 80px;
+}
+.main3h h2 {
+    font-size: 80px;
+}
+.main3h p {
+    font-size: 25px;
+    width: 100px;
+    height: 20px;
+    background-color: lightblue;
+    transition: 0.2s linear; 
+    transform: translateX(0);
+}
+.main3h p:hover {
+    transform: translateX(15px);
+    cursor: pointer;
+}
+.main3sub ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+.main3sub ul li {
+    padding: 0 50px;
+    width: 32%;
+}
+.main3sub img {
+    width: 100%;
+}
+.main3sub ul li h4 {
+    margin-top: 30px;
+}
+.main3sub p {
+    margin-top: 30px;
+}
+.titlebox{
+    margin-top: 50px;
+    height: 100px;
+}

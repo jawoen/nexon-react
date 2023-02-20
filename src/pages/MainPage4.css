@@ -1,0 +1,46 @@
+.main4{
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    height: 60vh;
+    margin-bottom: 150px;
+}
+.main4h {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 80px;
+    margin-bottom: 40px;
+}
+.main4h h2 {
+    font-size: 80px;
+}
+.main4h p {
+    font-size: 25px;
+    width: 130px;
+    height: 20px;
+    background-color: lightblue;
+    transition: 0.2s linear; 
+    transform: translateX(0);
+}
+.main4h p:hover {
+    transform: translateX(15px);
+    cursor: pointer;
+}
+.main4sub img {
+    width: 90%;
+    margin: 0 100px;
+}
+.textbox {
+    font-size: 30px;
+    width: 600px;
+    height: 180px;
+    position: relative;
+    top: -60px;
+    left: 100px;
+    background-color: #fff;
+}
+.textbox p {
+    padding: 40px 15px;
+    font-weight: bold;
+}

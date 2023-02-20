@@ -1,0 +1,73 @@
+.nexongame{
+    height: 100vh;
+    width: 100%;
+}
+/* 첫번째비주얼 */
+.first_visual{
+    background: url(/public/images/nexongames_bg.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    margin: 0 100px;
+}
+.first_visual h2{
+    font-size: 48px;
+    color:#fff;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.first_visual p{
+    font-size: 25px;
+    color:#fff;
+    text-align: center;
+    line-height: 1.8;
+}
+/* 첫번째비주얼 끝*/
+
+/* 서브 인포 */
+.sub_info{
+    height: 800px;
+    padding: 80px 0;
+    color:#333;
+    text-align: center;
+    font-size: 28px;
+}
+.sub_info p::after{
+    content: '';
+    display: block;
+    margin: 70px auto 0;
+    background: #3a3a3a;
+    width: 1px;
+    height: 50px;
+}
+/* 서브 인포 끝*/
+
+/* 두번째비주얼섹션 */
+.second_section{
+    height: 1000px;
+}
+.second_section h2{
+    color:#fff;
+    font-size: 50px;
+    text-align: center;
+    padding: 80px 0;
+}
+.sub_visual{
+    background: url(/public/images/sub_visual_bg_dark.jpg);
+    height: 600px;
+    margin: 0 100px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.second_section p{
+    color:#fff;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1.4;
+    text-shadow: 3px 3px 1px rgb(0 0 0/70%);
+}
+/* 두번째비주얼섹션 끝*/
