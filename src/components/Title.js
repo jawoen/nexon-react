@@ -1,7 +1,7 @@
 import React from 'react';
 const titleStyle = {
-    padding: "60px 0",
-    textAlign: "center",
+    padding: "100px 0 0 0",
+    textAlign: "left",
     fontSize: "24px"
 }
 const Title = ({title}) => {

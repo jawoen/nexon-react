@@ -3,6 +3,7 @@ import React, { useState,useEffect } from 'react';
 import Title from '../../components/Title';
 import { API_URL } from '../../config/apiurl';
 import { useNavigate } from 'react-router-dom';
+import './Joinpage.css';
 
 const JoinPage = () => {
     const navigate = useNavigate();
@@ -92,14 +93,14 @@ const JoinPage = () => {
                       }
                 }
                 else{
-                    alert("비밀번호와 비밀번호확인이 일치 하지않습니다")
+                    alert("비밀번호와 비밀번호 확인이 일치 하지않습니다")
                     setFormData({
                         ...formData,
                         m_passch:""
                     })
                 }
             }else{
-                alert("비밀번호를 다시 입력해주세요")
+                alert("8~16자 영문 대 소문자, 숫자, 특수문자를 사용하세요.")
                 setFormData({
                     ...formData,
                     m_pass:""
@@ -128,49 +129,49 @@ const JoinPage = () => {
         })
     }
     return (
-        <div className='inner'>
-            <Title title="Join"/>
-            <div>
+        <div className='join'>
+            <Title title="회원가입"/>
+            <div className='joinpg'>
                 <form onSubmit={onSubmit}>
                     <table className='defaulttable'>
                         <tbody>
-                            <tr>
+                            <tr className='name'>
                                 <td>이름</td>
                                 <td><input type="text" 
                                 name="m_name" value={formData.m_name} 
                                 onChange={onChange} /></td>
                             </tr>
-                            <tr>
+                            <tr className='id'>
                                 <td>아이디</td>
                                 <td><input type="text" 
                                 name="m_id" value={formData.m_id} 
                                 onChange={onChange} /></td>
                             </tr>
-                            <tr>
+                            <tr className='pass'>
                                 <td>비밀번호</td>
                                 <td><input type="password" 
                                 name="m_pass" value={formData.m_pass} 
                                 onChange={onChange} /></td>
                             </tr>
-                            <tr>
+                            <tr className='passch'>
                                 <td>비밀번호 체크</td>
                                 <td><input type="password"
                                 name="m_passch" value={formData.m_passch} 
                                 onChange={onChange} /></td>
                             </tr>
-                            <tr>
+                            <tr className='email'>
                                 <td>이메일</td>
                                 <td><input type="text" 
                                 name="m_email" value={formData.m_email} 
                                 onChange={onChange} /></td>
                             </tr>
-                            <tr>
+                            <tr className='number'>
                                 <td>전화번호</td>
                                 <td><input type="text"
                                 name="m_phone" value={formData.m_phone} 
                                 onChange={onChange} /></td>
                             </tr>
-                            <tr>
+                            <tr className='adrress'>
                                 <td>주소</td>
                                 <td><input type="text"
                                 name="m_address1" value={formData.m_address1} 
@@ -180,7 +181,7 @@ const JoinPage = () => {
                                 onChange={onChange} />
                                 </td>
                             </tr>
-                            <tr>
+                            <tr className='btn'>
                                <td colSpan={2}>
                                 <button type="submit">등록</button>
                                 <button type="reset">취소</button>

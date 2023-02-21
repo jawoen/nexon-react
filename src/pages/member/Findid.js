@@ -11,7 +11,7 @@ const Findid = () => {
         m_email : ""
     }); 
     const onChange = (e) =>{
-        const { name,value} = e.target;
+        const {name,value} = e.target;
         setFormData({
             ...formData,
             [name] : value
@@ -37,7 +37,7 @@ const Findid = () => {
         e.preventDefault();
         const reg4= /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
         if(formData.m_phone.length === 13){
-            if(reg4.test(formData.m_email1)){
+            if(reg4.test(formData.m_email)){
              axios.post(`${API_URL}/findid`, formData)
             .then(res=>{
             setIdInfo(res.data)
@@ -49,7 +49,7 @@ const Findid = () => {
             alert("이메일을 다시 입력해주세요")
             setFormData({
                 ...formData,
-                m_email1:""
+                m_email:""
             })
           }
         }else{

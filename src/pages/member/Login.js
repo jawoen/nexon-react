@@ -73,7 +73,7 @@ const Login = () => {
                     <tr>
                         <td colSpan={2}>
                             <button type="submit">로그인</button>
-                            <button>회원가입</button>
+                            <button><Link to='/join'>회원가입</Link></button>
                         </td>
                     </tr>
                     <tr>
