@@ -1,9 +1,8 @@
 import axios from 'axios';
 import React, { useState,useEffect } from 'react';
-import Title from '../../components/Title';
 import { API_URL } from '../../config/apiurl';
 import { useNavigate } from 'react-router-dom';
-import './Joinpage.css';
+import '../css/JoinPage.css';
 
 const JoinPage = () => {
     const navigate = useNavigate();
@@ -130,7 +129,7 @@ const JoinPage = () => {
     }
     return (
         <div className='join'>
-            <Title title="회원가입"/>
+            <h2>회원가입</h2>
             <div className='joinpg'>
                 <form onSubmit={onSubmit}>
                     <table className='defaulttable'>
@@ -139,48 +138,66 @@ const JoinPage = () => {
                                 <td>이름</td>
                                 <td><input type="text" 
                                 name="m_name" value={formData.m_name} 
-                                onChange={onChange} /></td>
+                                onChange={onChange}/></td>
                             </tr>
                             <tr className='id'>
                                 <td>아이디</td>
                                 <td><input type="text" 
                                 name="m_id" value={formData.m_id} 
-                                onChange={onChange} /></td>
+                                onChange={onChange}/></td>
                             </tr>
                             <tr className='pass'>
                                 <td>비밀번호</td>
-                                <td><input type="password" 
+                                <td>
+                                <input type="password" 
                                 name="m_pass" value={formData.m_pass} 
-                                onChange={onChange} /></td>
+                                onChange={onChange}
+                                placeholder='10-16자, 영문/숫자/특수문자 조합'/>
+                                </td>
                             </tr>
                             <tr className='passch'>
                                 <td>비밀번호 체크</td>
                                 <td><input type="password"
                                 name="m_passch" value={formData.m_passch} 
-                                onChange={onChange} /></td>
+                                onChange={onChange}
+                                placeholder='비밀번호와 동일하게 입력해주세요.'/></td>
                             </tr>
                             <tr className='email'>
                                 <td>이메일</td>
                                 <td><input type="text" 
                                 name="m_email" value={formData.m_email} 
-                                onChange={onChange} /></td>
+                                onChange={onChange}/>@
+                                    <select>
+                                        <option>직접입력</option>
+                                        <option>naver.com</option>
+                                        <option>gmail.com</option>
+                                        <option>hanmail.net</option>
+                                        <option>hotmail.com</option>
+                                        <option>nate.com</option>
+                                        <option>msn.com</option>
+                                    </select>
+                                </td>
                             </tr>
                             <tr className='number'>
                                 <td>전화번호</td>
                                 <td><input type="text"
                                 name="m_phone" value={formData.m_phone} 
-                                onChange={onChange} /></td>
+                                onChange={onChange}/></td>
                             </tr>
                             <tr className='adrress'>
                                 <td>주소</td>
                                 <td><input type="text"
                                 name="m_address1" value={formData.m_address1} 
-                                onChange={onChange} />
+                                onChange={onChange}/>
                                 <input type="text"
                                 name="m_address2" value={formData.m_address2} 
-                                onChange={onChange} />
+                                onChange={onChange}/>
                                 </td>
-                            </tr>
+                            </tr>   
+                            {/* <tr>
+                                <input type='checkbox' />
+                                <span>[필수] 넥슨컴퍼니 채용 회원가입을 위한 개인정보 수집 이용에 동의합니다.</span>
+                            </tr> */}
                             <tr className='btn'>
                                <td colSpan={2}>
                                 <button type="submit">등록</button>

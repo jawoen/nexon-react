@@ -6,6 +6,7 @@ import Title from '../../components/Title';
 import { API_URL } from '../../config/apiurl';
 import { goToHome, setLogin } from '../../modules/logincheck';
 import { setCookie } from '../../util/cookie';
+import '../css/Login.css';
 
 const Login = () => {
     //input입력값 상태관리 
@@ -51,40 +52,36 @@ const Login = () => {
         }
     }
     return (
-        <div className='inner' id="login">
-            <Title title="Login"/>
+        <div id="login">
                 <h2>로그인</h2>
-            <form onSubmit={onSubmit}>
-                <table className='defaulttable small'>
-                    <tbody>
-                    <tr>
-                        <td>아이디</td>
-                        <td><input type="text" name="userid" 
-                        value={loginData.userid} 
-                        onChange={onChange}/></td>
-                    </tr>
-                    <tr>
-                        <td>비밀번호</td>
-                        <td><input type="password" name="userpass"
-                        value={loginData.userpass}
-                        onChange={onChange}
-                        /></td>
-                    </tr>
-                    <tr>
-                        <td colSpan={2}>
-                            <button type="submit">로그인</button>
-                            <button><Link to='/join'>회원가입</Link></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colSpan={2}>
-                            <Link to="/findid"><span>아이디 찾기</span></Link> 
-                            <Link to="/findpass"><span>비밀번호 찾기</span></Link>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </form>
+            <div className='inner' onSubmit={onSubmit}>
+                    <p>*넥슨에 처음 지원하실 경우 먼저 회원 가입을 진행 해주시기 바랍니다.</p>
+                    <div className='top'>
+                        <div>
+                            <div className='idps'>아이디</div>
+                            <div><input type="text" name="userid" 
+                            value={loginData.userid} 
+                            placeholder=" 아이디를 입력하세요"
+                            onChange={onChange}/></div>
+                        </div>
+                        <div>
+                            <div className='idps'>비밀번호</div>
+                            <div><input type="password" name="userpass"
+                            value={loginData.userpass}
+                            placeholder=" 비밀번호를 입력하세요"
+                            onChange={onChange}
+                            /></div>
+                        </div>
+                    </div>
+                    <div className='find'>
+                        <div><Link to="/findid"><span>아이디 찾기</span></Link></div>
+                        <div><Link to="/findpass"><span>비밀번호 찾기</span></Link></div>
+                    </div>
+                    <div className='btns'>
+                        <button type="submit">로그인</button>
+                        <button><Link to="/join">회원가입</Link></button>
+                    </div>
+            </div>
         </div>
     );
 };

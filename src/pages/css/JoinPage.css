@@ -1,0 +1,58 @@
+.join {
+  background-color: #f9f9f9;
+  height: 95vh;
+  font-size: 12px;
+}
+.join h2 {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 20px;
+}
+.join .joinpg {
+  width: 1000px;
+  height: 70vh;
+  background-color: #fff;
+  margin: 0 auto;
+  border-top: 4px solid gray;
+  margin-top: 25px;
+}
+.join .joinpg .defaulttable {
+  display: flex;
+  margin-top: 70px;
+  margin-left: 50px;
+}
+.join .joinpg .defaulttable tbody {
+  border-top: 4px solid #ccc;
+  padding: 30px 0;
+  width: 100%;
+}
+.join .joinpg .defaulttable tr, .join .joinpg .defaulttable td {
+  padding: 20px 40px;
+}
+.join .joinpg .defaulttable input, .join .joinpg .defaulttable select {
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+}
+.join .joinpg .btn {
+  display: flex;
+}
+.join .joinpg button {
+  background-color: #1890FF;
+  border-style: none;
+  margin: 5px 0;
+  width: 450px;
+  height: 40px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.join .joinpg button:hover {
+  background-color: #50a4f3;
+}
+.join .joinpg button:active {
+  background-color: #1472ca;
+}/*# sourceMappingURL=joinpage.css.map */

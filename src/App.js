@@ -7,8 +7,8 @@ import SubNexonGames from './pages/SubNexonGames';
 import SubNews from './pages/SubNewsaaa';
 import JoinPage from './pages/member/JoinPage';
 import Login from './pages/member/Login';
-import Findid from './pages/member/Findid';
-import Findpassword from './pages/member/Findpassword';
+import FindId from './pages/member/FindId';
+import FindPassword from './pages/member/FindPassword';
 import WriteNews from './pages/WriteNews';
 
 
@@ -23,8 +23,8 @@ function App() {
         <Route path='/media' element={<SubNews/>}/>
         <Route path="/join" element={<JoinPage/>}/>
         <Route path="/login" element={<Login/>}/>
-        <Route path='/Findid' element={<Findid/>}/>
-        <Route path='/Findpass' element={<Findpassword/>}/>
+        <Route path='/FindId' element={<FindId/>}/>
+        <Route path='/FindPass' element={<FindPassword/>}/>
         <Route path="/writenews" element={<WriteNews/>}/>
       </Routes>
       <Footer/>

@@ -4,10 +4,11 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { API_URL } from '../../config/apiurl';
 import { setId } from '../../modules/logincheck';
-import Editpassword from './Editpassword';
+import EditPassword from './EditPassword';
+import "../css/FindIdPass.css";
 
 
-const Findpassword = () => {
+const FindPassword = () => {
     
     const dispatch= useDispatch();
     const [idInfo,setIdInfo] = useState("");
@@ -53,27 +54,28 @@ const Findpassword = () => {
     }
     return (
         <div className='Findid'>
-            { idInfo ? <Editpassword/> :
+            <h2>비밀번호 찾기</h2>
+            { idInfo ? <EditPassword/> :
             <>
             <form onSubmit={onSubmit}>
                 <div id='Findid'>
-                    <div id='Findidimg'>
-                            <p>가입시 입력한 회원정보를 입력해 주세요.</p>
+                    <div>
+                            <p>* 가입시 입력한 회원정보를 입력해 주세요.</p>
                     </div>
-                    <div id='Findidinput'>
+                    <div>
                         <input type='text' placeholder='아이디'
                         name='m_id' value={formData.m_id} onChange={onChange}/>
                     </div>
-                    <div id='Findidinput'>
+                    <div>
                         <input type='text' placeholder='휴대폰번호'
                         name='m_phone' value={formData.m_phone} onChange={onChange}/>
                     </div>
+                    <button>비밀번호 찾기</button>
                 </div>
-                <button id='Joinfooter'>비밀번호 찾기</button>
            </form> 
             </>}
         </div>
     );
 };
 
-export default Findpassword;
+export default FindPassword;

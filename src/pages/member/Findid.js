@@ -2,8 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { API_URL } from '../../config/apiurl';
+import '../css/FindId.css';
 
-const Findid = () => {
+const FindId = () => {
     const [idInfo,setIdInfo] = useState("");
     const [formData,setFormData] = useState({
         m_name : "",
@@ -64,28 +65,29 @@ const Findid = () => {
     }
     return (
         <div className='Findid'>
+            <h2>아이디 찾기</h2>
             { idInfo ? <div> 당신의 id는 {idInfo} 입니다. <Link to ="/login"><button>로그인</button></Link> </div> :
             <>
             <form onSubmit={onSubmit}>
                 <div id='Findid'>
-                    <div id='Findidimg'>
-                            <p>가입시 입력한 회원정보를 입력해 주세요.</p>
+                    <div>
+                            <p>* 가입시 입력한 회원정보를 입력해 주세요.</p>
                     </div>
-                    <div id='Findidinput'>
+                    <div>
                         <input type='text' placeholder='이름' name='m_name' value={formData.m_name} onChange={onChange}/>
                     </div>
-                    <div id='Findidinput'>
+                    <div>
                         <input type='text' placeholder='휴대폰번호' name='m_phone' value={formData.m_phone} onChange={onChange}/>
                     </div>
-                    <div id='Findidinput'>
+                    <div>
                         <input type='text' placeholder='E-MAIL' name='m_email' value={formData.m_email} onChange={onChange}/>
                     </div>
+                    <button>아이디 찾기</button>
                 </div>
-                <button id='Joinfooter'>아이디 찾기</button>
             </form>
             </>}
         </div>
     );
 };
 
-export default Findid;
+export default FindId;

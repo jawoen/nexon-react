@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config/apiurl';
 
-const Editpassword = () => {
+const EditPassword = () => {
     const userid = useSelector(state=>state.logincheck.updateId);
     console.log(userid);
     const navigate = useNavigate();
@@ -64,4 +64,4 @@ const Editpassword = () => {
     );
 };
 
-export default Editpassword;
+export default EditPassword;
