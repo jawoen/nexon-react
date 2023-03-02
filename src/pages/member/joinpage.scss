@@ -1,59 +1,82 @@
-.join {
-    background-color: #f9f9f9;
-    height: 95vh;
-    font-size: 12px;
-    h2 {
+.join{
+    width: 100%;
+    height: 120vh;
+    background-color: #F9F9F9;
+    h2{
+        margin-top:90px;
+        height: 50px;
+        font-size: 35px;
         text-align: center;
-        padding: 10px 0;
-        font-size: 20px;
+        line-height: 5;
     }
-    .joinpg {
+    .joinpg{
+        display: flex;
         width: 1000px;
-        height: 70vh;
         background-color: #fff;
+        height: 950px;
+        flex-direction: column;
+        border-top: 3px solid #858585;
         margin: 0 auto;
-        border-top: 4px solid gray;
-        margin-top: 25px;
-
-        .defaulttable {
-            display: flex;
-            margin-top: 70px;
-            margin-left: 50px;
-            tbody {
-                border-top: 4px solid #ccc;
-                padding: 30px 0;
-                width: 100%;
-            }
-            tr,td{
-                padding: 20px 40px;
-            }
-            input,select {
-                width: 300px;
-                height: 40px;
-                border-radius: 5px;
-                outline: none;
-                padding: 10px;
+        align-items: center;
+        margin-top: 95px;
+        .postcode{
+            background-color: #797777;
+            color:black;
+            border-radius: 5px;
+            border-style: none;
+            width: 100px;
+            height: 30px;
+            font-size: 5px;
+            &:active{
+                background-color: #525050;;
+            } 
+            &:hover{
+                background-color: #918f8f;
             }
         }
-        
-        .btn {
-            display: flex;
-        } button{
+        form {
+            margin-top: 20px;
+        }
+        ul {
+            padding: 10px 0;
+        input {
+            padding: 20px;
+            width: 450px;
+            height: 40px;
+            border-radius: 8px;
+            outline: none;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #C2C9D1;
+            background-color: #fff;
+            &:focus {
+                border: 1px solid #1890FF;
+            }
+        }
+        .joinbtn {
             background-color: #1890FF;
             border-style: none;
             margin: 5px 0;
-            width: 450px;
-            height: 40px;
-            color:#fff;
+            width: 750px;
+            height: 50px;
+            color: #fff;
             font-size: 15px;
             cursor: pointer;
             border-radius: 3px;
-            &:hover{
-                background-color:#50a4f3;
-            }
-            &:active{
+            margin-left: 35px;
+            &:hover {
+                background-color: #50a4f3;
+              }
+            &:active {
                 background-color: #1472ca;
-            }
+              }
+          }
         }
+          .adrress {
+            input {
+                margin-right: 20px;
+                width: 300px;
+              }
+          }
     }
 }

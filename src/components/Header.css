@@ -47,15 +47,3 @@
 .hidden ul li {
     padding: 20px 30px;
 }
-.membermenu {
-    display: flex;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-}
-.membermenu li {
-    padding: 0 10px;
-}
-.membermenu li:hover {
-     color: #ccc;
-}

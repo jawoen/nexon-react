@@ -20,7 +20,7 @@ const PopupPostCode = ({onClose, onAddData}) => {
       const postCodeStyle = {
         display: "block",
         position: "absolute",
-        top: "50%",
+        top: "61%",
         left: "50%",
         transform: "translate(-50%,-50%)",
         width: "600px",
@@ -30,9 +30,6 @@ const PopupPostCode = ({onClose, onAddData}) => {
     return (
         <div>
             <DaumPostcode onComplete={handleComplete} style={postCodeStyle}/>
-            <button className='postCode_btn' onClick={()=>{
-                onClose()
-            }}>입력</button>
         </div>
     );
 };
